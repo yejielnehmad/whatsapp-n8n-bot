@@ -1,5 +1,4 @@
-const pkg = require('whatsapp-web.js');
-const { Client, LocalAuth } = pkg;
+const { Client, LocalAuth } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 
 const client = new Client({
