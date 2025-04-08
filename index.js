@@ -18,7 +18,7 @@ client.on('ready', () => {
   console.log('¡Bot de WhatsApp conectado!');
 });
 
-client.on('message', message => {
+client.on('message', (message) => {
   console.log(`Mensaje de ${message.from}: ${message.body}`);
 });
 
