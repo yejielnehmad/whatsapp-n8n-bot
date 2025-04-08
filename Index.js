@@ -1,4 +1,5 @@
 import { Client, LocalAuth } from 'whatsapp-web.js';
+import { Client, LocalAuth } from 'whatsapp-web.js';
 import qrcode from 'qrcode-terminal';
 
 const client = new Client({
@@ -10,17 +11,16 @@ const client = new Client({
 });
 
 client.on('qr', (qr) => {
-  console.log('QR generado. Escanealo con WhatsApp:');
+  console.log('Escaneá este QR con tu WhatsApp para conectar:');
   qrcode.generate(qr, { small: true });
 });
 
 client.on('ready', () => {
-  console.log('Bot conectado y listo!');
+  console.log('¡Bot de WhatsApp conectado!');
 });
 
-client.on('message', (message) => {
+client.on('message', message => {
   console.log(`Mensaje de ${message.from}: ${message.body}`);
-  // Acá más adelante podemos enviar a n8n
 });
 
 client.initialize();
