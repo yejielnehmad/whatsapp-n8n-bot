@@ -1,9 +1,9 @@
 {
   "name": "whatsapp-n8n-bot",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.cjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.cjs"
   },
   "dependencies": {
     "qrcode-terminal": "^0.12.0",
