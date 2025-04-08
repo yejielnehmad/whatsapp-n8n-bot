@@ -1,12 +1,14 @@
 {
-  "name": "whatsapp-n8n-bot",
+  "name": "whatsapp-railway-bot",
   "version": "1.0.0",
-  "main": "index.cjs",
+  "main": "index.js",
   "scripts": {
-    "start": "node index.cjs"
+    "start": "node index.js"
   },
   "dependencies": {
     "qrcode-terminal": "^0.12.0",
-    "whatsapp-web.js": "^1.18.4"
+    "whatsapp-web.js": "^1.21.1",
+    "mongoose": "^7.6.3",
+    "wwebjs-mongo": "^1.5.0"
   }
 }
