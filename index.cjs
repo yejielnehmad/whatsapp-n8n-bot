@@ -4,8 +4,9 @@ const qrcode = require('qrcode-terminal');
 const client = new Client({
   authStrategy: new LocalAuth(),
   puppeteer: {
-    args: ['--no-sandbox'],
-    headless: true
+    headless: true,
+    executablePath: '/usr/bin/google-chrome', // No lo usará en Railway, pero lo pide
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   }
 });
 
@@ -18,7 +19,7 @@ client.on('ready', () => {
   console.log('¡Bot de WhatsApp conectado!');
 });
 
-client.on('message', (message) => {
+client.on('message', message => {
   console.log(`Mensaje de ${message.from}: ${message.body}`);
 });
 
